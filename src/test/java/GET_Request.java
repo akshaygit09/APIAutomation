@@ -24,7 +24,6 @@ public class GET_Request {
         int statusCode = response.getStatusCode();
         System.out.println("Status Code is :" + statusCode);
         Assert.assertEquals(statusCode, 200);
-        Assert.assertEquals(statusCode, 200);
 
         //status line verification
         String StatusLine = response.getStatusLine();
