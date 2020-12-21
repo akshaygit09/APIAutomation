@@ -5,7 +5,7 @@ import io.restassured.specification.RequestSpecification;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class GET_Request {
+public class TC001_GET_Request {
 
 
     @Test

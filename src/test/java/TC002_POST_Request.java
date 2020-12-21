@@ -7,7 +7,7 @@ import io.restassured.http.Method;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
-public class PUSH_Request {
+public class TC002_POST_Request {
 
     @Test
     void customerRegistration() {
@@ -36,8 +36,20 @@ public class PUSH_Request {
 
         //Job validation
         String JobID = response.jsonPath().get("job");
-        System.out.println("ID is :" + JobID);
+        System.out.println("Job is :" + JobID);
         Assert.assertEquals(JobID,"QA");
+
+        //Content type validation
+        String contentType = response.header("Content-type");
+        System.out.println("Content Type is :" + contentType);
+        Assert.assertEquals(contentType,"application/json; charset=utf-8");
+
+        //date validation
+        String date = response.header("date");
+        System.out.println("Date is :" + date);
+
+
+
 
 
 
